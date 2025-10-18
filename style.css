@@ -32,6 +32,7 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  position: relative;
 }
 
 .avatar-wrapper{
@@ -98,15 +99,17 @@ p{
   font-size: .6rem;
   align-self: center;
   padding: 0;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--grey1);
 }
 .stats span{
   display: flex;
   align-items: center;
   gap: 1px;
+  font-size: .6rem;
   color: #595959;
   transition: .1s ease;
+  margin-left: 2px;
 }
 .stats span:hover i{
   color: rgb(51, 51, 255);
@@ -153,20 +156,25 @@ ul li {
 }
 
 .socials button{
-  background-color: var(--grey4);
+  background-color: rgb(144, 230, 144);
+  color: var(--grey2);
+  
   border: none;
   padding: 5px;
   font-weight:500;
   transition: .3s ease-out;
-  color: var(--white);
   position: absolute;
   right:0px;
 }
 .socials button:hover{
-  background-color: rgb(144, 230, 144);
-  color: var(--grey2);
+  background-color: var(--grey4);
+  color: var(--white);
   border-radius: .2rem;
   cursor: pointer;
+}
+
+.socials button:active{
+  transform: scale(1.1);
 }
 
 .numbers {
@@ -181,4 +189,10 @@ ul li {
 .time {
   font-size: .5rem;
   font-weight: 600;
+  color: var(--grey2);
+}
+
+.socials a {
+  text-decoration: none;
+  color: inherit;
 }
