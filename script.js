@@ -1,14 +1,11 @@
 const timeElement = document.querySelector('[data-testid="test-user-time"]');
 
 function updateTime() {
-  const now = Date.now();
-  const readable = new Date(now).toLocaleTimeString(undefined, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-  timeElement.textContent = readable;
+  timeElement.textContent = Date.now();
 }
 
 updateTime();
 setInterval(updateTime, 1000);
-
 
 
 
@@ -50,7 +47,6 @@ const followButton = document.getElementById('followBtn');
 
 
 
-
   const img = document.getElementById('img');
   const icon = document.getElementById('myIcon');
   const checkmark = document.getElementById('checkmark');
@@ -67,14 +63,6 @@ const followButton = document.getElementById('followBtn');
         followButton.style.color = isFollowing? "white" : "rgb(7, 164, 7)";
     
     });
-  
-  icon.addEventListener("ready", () => {
-  followButton.addEventListener("click", () => {
-    icon.playerInstance.play();
-    
-  });
-  icon.removeEventListener('complete');
-});
   
   icon.addEventListener('ready', () => {
       
