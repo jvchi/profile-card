@@ -11,8 +11,9 @@
   --grey4: #CCCCCC;
   --white: #F2F2F2;
   --margin: 12px;
-  --green: rgb(7, 164, 7);
-  --light-green: rgb(144, 230, 144);
+  --green: #07a407;
+  --light-green: #90e690;
+  --blue : rgba(120, 120, 255, 0.966);
 }
 
 body{
@@ -36,6 +37,8 @@ body{
   padding: 10px;
   position: relative;
 }
+
+
 
 .avatar-wrapper{
   width: 100%;
@@ -64,70 +67,71 @@ body{
   gap: 5px;
   height: 20px;
   margin: 10px 5px;
-  
+  cursor: pointer;
+  transition: .5 ease;
+}
+.username .user-tick{
+  background-color: var(--green);
+  border-radius: 100%;
+  border: none;
+  width: 50px;
+  height: 20px;
+}
+.username:hover{
+  transition: .3s ease;
 }
 
-.username i{
-  font-size: 1.1rem;
-  font-weight: 500;
-  display: inline-block;
-  transform-origin: center;
-  will-change: transform;
-  color: var(--green);
-  transition: transform .3s ease-in;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
- .username i .animated-ticker{
-  position: absolute;
-  z-index: 3;
-}
 
 p{
   font-size: .75rem;
-  margin: 0px 13px;
+  margin: 0px 10px;
   color: var(--grey1);
   font-weight: 500;
 }
+.about{
+  border-left: 2px solid #cccccc54;
+  display: inline-block;
+  margin-left: 10px;
+  height: 90px;
+}
 
-.stats{
+.icon-group{
   display: flex;
   align-items: center;
   font-size: .8rem;
   font-weight: 700;
-  margin: 0px 10px 0px;
-  gap: 10px;
+  margin: 0px 9px 0px;
   cursor: pointer;
+  gap: 10px;
 }
 
-.stats span i {
-  font-size: .6rem;
-  align-self: center;
-  padding: 0;
-  font-weight: 500;
-  color: var(--grey1);
-}
-.stats span{
+.icon-group .group{
   display: flex;
   align-items: center;
-  gap: 1px;
   font-size: .6rem;
   color: #595959;
   transition: .1s ease;
-  margin-left: 2px;
+  gap: 2px;
 }
-.stats span:hover i{
-  color: rgb(51, 51, 255);
-  transform: scale(1.1);
+.icon-group .group .digits{
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: .6rem;
+  z-index: 3;
 }
+
+.icon-group span lord-icon {
+  color: var(--grey1);
+  vertical-align: middle;
+  opacity: .1 !important;
+}
+
 
 ul{
   font-size: .65rem;
   font-weight: 600;
-  margin: 13px;
+  margin: 5px;
   padding: 0;
   color: var(--grey1);
 }
@@ -149,30 +153,38 @@ ul li::marker{
   margin: var(--margin);
   cursor: pointer;
   transition: .3s ease-in-out;
-  color: var(--grey1);
   position: relative;
 }
 .socials span {
   font-size: .7rem;
-  transition: .3s ease-in-out;
+  transition: .3s ease;
   color: var(--grey2);
 }
-.socials span:hover i{
-  color: rgb(252, 69, 69);
-  scale: 1.1;
+.socials a:hover{
+  transition: .3s ease;
+  transform: scale(1.2);
+  font-weight: 700;
 }
 
+
+.socials span:hover > i{
+  transition: .3s ease;
+  opacity: 0;
+  transform: translateX(5px);
+}
+
+
 .socials i {
-  color: var(--grey2);
   transform: scale(.9);
+  z-index: -1;
 }
 
 .socials button{
-  background-color: rgb(144, 230, 144);
+  background-color: var(--light-green);
   color: var(--green);
   border: none;
   padding: 5px;
-  font-weight:500;
+  font-weight:600;
   transition: .3s ease-out;
   height: 30px;
   width: 80px;
@@ -180,7 +192,6 @@ ul li::marker{
   right: 0px;
 }
 .socials button:hover{
-  color: var(--white);
   border-radius: .2rem;
   cursor: pointer;
 }
@@ -189,14 +200,7 @@ ul li::marker{
   transform: scale(1.1);
 }
 
-.numbers {
-  font-size: .6rem;
-}
 
-.numbers .fal {
-  font-size: .5rem;
-  color: var(--grey2);
-}
 
 .time {
   font-size: .4rem;
@@ -207,5 +211,5 @@ ul li::marker{
 
 .socials a {
   text-decoration: none;
-  color: inherit;
+  color: var(--grey2);
 }

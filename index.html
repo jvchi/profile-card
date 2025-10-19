@@ -61,26 +61,19 @@
     <div class="profile-info">
     <header class="username">
       <h2 data-testid="test-user-name">Vincent Van Gogh</h2>
-      <span><i class="fa-duotone fa-badge" id="checkmark">
-        
-        <lord-icon 
-        id="myIcon"
-        class="animated-ticker"
-        src="https://cdn.lordicon.com/fsstjlds.json"
+     <lord-icon class="user-tick"
+        src="https://cdn.lordicon.com/zdfcfvwu.json"
         trigger="hover"
-        stroke="bold"
-        style="width: 13px;
-        height:13px; "
-        colors="primary:#07A407"
-        speed="2"
-        >
-    </lord-icon>
-      </i></span>
-      
-    </header>
-    <p data-testid="test-user-bio">
+        colors="primary:#90e690,secondary:;"
+        target=".username"
+        style="width:15px;height:15px">
+     </lord-icon>
+      </header>
+      <p data-testid="test-user-bio">
       wanna-be front-end engineer who obsesses over details
     </p>
+    <section class="about">
+    
     <section class="user-hobby"  data-testid="test-user-hobbies"><ul class="user-hobby" data-testid="test-user-hobby"> Hobbies
       <li>watching animes</li>
       <li>reading history.</li>
@@ -91,18 +84,38 @@
       <li>I dislike cluster, maybe its as a result of my phobia</li>
     </ul>
       
-  </section>
-    <div class="stats">
+    </section>
+    </section>
 
-      <span class="numbers"><i class="fal fa-user"></i></i>404</span>
-
-      <span class="numbers"><i class="fal fa-folders"></i>23</span>
-      
+    <div class="icon-group">
+      <div class="group">
+        <lord-icon id="digit-icon"
+          src="https://cdn.lordicon.com/bushiqea.json"
+          trigger="morph"
+          target=".group"
+          style="width:10px;height:10px">
+      </lord-icon>
+      <span class="digits" id="digits">404</span>
+      </div>
+      <div class="group">
+        <lord-icon
+        id="digit-icon"
+          src="https://cdn.lordicon.com/yraqammt.json"
+          trigger="morph"
+          target=".group"
+          style="
+          width:10px;
+          height:10px">
+      </lord-icon>
+      </lord-icon>
+      <span class="digits" id="digits">23</span>
+      </div>
     </div>
-    <div class="socials">
-      <span><i class="fab fa-square-reddit"></i><a href="reddit.com">Reddit</a></span>
 
-      <span><i class="fab fa-linkedin"></i><a href="linkedin.com">Linkedin</a></span>
+    <div class="socials">
+      <span><i class="fab fa-square-reddit" style="color: rgb(213, 114, 1);"></i><a href="reddit.com" class="reddit">Reddit</a></span>
+
+      <span><i class="fab fa-linkedin"  style="color: rgba(3, 3, 140, 0.605);" ></i><a href="linkedin.com" class="linkedin" >Linkedin</a></span>
      <button class="follow-button" id="followBtn">Follow +
       </button>
     </div>
