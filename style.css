@@ -199,9 +199,10 @@ ul li::marker{
 }
 
 .time {
-  font-size: .5rem;
-  font-weight: 600;
-  color: var(--grey2);
+  font-size: .4rem;
+  font-weight: 500;
+  color: var(--grey1);
+  opacity: .5;
 }
 
 .socials a {
