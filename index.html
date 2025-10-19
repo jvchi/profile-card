@@ -45,13 +45,14 @@
       >
         <script src="https://kit.fontawesome.com/e93a201752.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.lordicon.com/lordicon.js"></script>
 <script src="script.js" defer></script>
 </head>
 
 <body>
   <article class="profile-card" data-testid="test-profile-card">
     <figure class="avatar-wrapper">
-      <img src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987" 
+      <img id="img" src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=987" 
       alt="profile photo of Vincent Van Gogh"
       data-testid="test-user-avatar"
       >
@@ -60,7 +61,22 @@
     <div class="profile-info">
     <header class="username">
       <h2 data-testid="test-user-name">Vincent Van Gogh</h2>
-      <span><i class="fad fa-badge-check"></i></span>
+      <span><i class="fa-duotone fa-badge" id="checkmark">
+        
+        <lord-icon 
+        id="myIcon"
+        class="animated-ticker"
+        src="https://cdn.lordicon.com/fsstjlds.json"
+        trigger="hover"
+        stroke="bold"
+        style="width: 13px;
+        height:13px; "
+        colors="primary:#07A407"
+        speed="2"
+        >
+    </lord-icon>
+      </i></span>
+      
     </header>
     <p data-testid="test-user-bio">
       wanna-be front-end engineer who obsesses over details
@@ -87,7 +103,8 @@
       <span><i class="fab fa-square-reddit"></i><a href="reddit.com">Reddit</a></span>
 
       <span><i class="fab fa-linkedin"></i><a href="linkedin.com">Linkedin</a></span>
-      <button class="follow-button">Follow +</button>
+     <button class="follow-button" id="followBtn">Follow +
+      </button>
     </div>
     <p class="time">
         <span data-testid="test-user-time"></span>
@@ -95,5 +112,6 @@
     
   </article>
 
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 </html>

@@ -11,6 +11,8 @@
   --grey4: #CCCCCC;
   --white: #F2F2F2;
   --margin: 12px;
+  --green: rgb(7, 164, 7);
+  --light-green: rgb(144, 230, 144);
 }
 
 body{
@@ -56,12 +58,13 @@ body{
 }
 
 .username{
-  font-size: .9rem;
+  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 5px;
   height: 20px;
-  margin: 10px 10px;
+  margin: 10px 5px;
+  
 }
 
 .username i{
@@ -70,16 +73,21 @@ body{
   display: inline-block;
   transform-origin: center;
   will-change: transform;
-  color: rgb(7, 164, 7);
+  color: var(--green);
   transition: transform .3s ease-in;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-
-.username:hover i {
-  transform: rotate(360deg);
+ .username i .animated-ticker{
+  position: absolute;
+  z-index: 3;
 }
 
 p{
-  font-size: .8rem;
+  font-size: .75rem;
   margin: 0px 13px;
   color: var(--grey1);
   font-weight: 500;
@@ -117,7 +125,7 @@ p{
 }
 
 ul{
-  font-size: .7rem;
+  font-size: .65rem;
   font-weight: 600;
   margin: 13px;
   padding: 0;
@@ -129,6 +137,9 @@ ul li {
   color: var(--grey2);
   margin-left: var(--margin);
   font-weight: 500;
+}
+ul li::marker{
+  color: var(--grey4);
 }
 
 .socials{
@@ -144,6 +155,7 @@ ul li {
 .socials span {
   font-size: .7rem;
   transition: .3s ease-in-out;
+  color: var(--grey2);
 }
 .socials span:hover i{
   color: rgb(252, 69, 69);
@@ -157,17 +169,17 @@ ul li {
 
 .socials button{
   background-color: rgb(144, 230, 144);
-  color: var(--grey2);
-  
+  color: var(--green);
   border: none;
   padding: 5px;
   font-weight:500;
   transition: .3s ease-out;
+  height: 30px;
+  width: 80px;
   position: absolute;
-  right:0px;
+  right: 0px;
 }
 .socials button:hover{
-  background-color: var(--grey4);
   color: var(--white);
   border-radius: .2rem;
   cursor: pointer;
